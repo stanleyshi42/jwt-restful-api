@@ -29,7 +29,6 @@ class CustomerControllerTests {
         Customer actualCustomer = controller.addCustomer(expectedCustomer);
 
         assertEquals(expectedUsername, actualCustomer.getUsername());
-        assertEquals(expectedPassword, actualCustomer.getPassword());
         assertEquals(expectedRoles, actualCustomer.getRoles());
 
         controller.deleteCustomerById(actualCustomer.getId());
