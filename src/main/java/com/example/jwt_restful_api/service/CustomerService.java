@@ -36,8 +36,12 @@ public class CustomerService implements UserDetailsService {
         return repo.save(customer);
     }
 
-    public List<Customer> getAllCustomers(){
+    public List<Customer> getAllCustomers() {
         return repo.findAll();
+    }
+
+    public void deleteCustomerById(int id) {
+        repo.deleteById(id);
     }
 
 }

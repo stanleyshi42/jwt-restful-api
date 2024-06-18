@@ -49,4 +49,10 @@ public class CustomerController {
         return customerService.getAllCustomers();
     }
 
+    @DeleteMapping("/customer/{id}")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public String deleteCustomerById(@PathVariable int id) {
+        customerService.deleteCustomerById(id);
+        return "Customer successfully deleted";
+    }
 }
